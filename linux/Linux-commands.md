@@ -79,3 +79,23 @@ command >> output.txt
 ```bash
 history >> log.txt
 ```
+
+## File permission
+
+- The `chmod` command in Linux is used to change file permissions. It allows you to modify the read (r), write (w), and execute (x) permissions for files and directories. You can set permissions for the owner (user), group, and others (everyone else) who have access to the file.
+```bash
+chmod 744 install.sh
+```
+The first number (7) represents permission for a user: 7 = ( 4 (read) +2 (write) +1(execute) )
+The second number (4) represents permissions for a group: 4 (read)
+The third number (4) represents permissions for others: 4 (read)
+
+- The `chown` command in Linux is used to change the owner and group owner of files and directories. It allows you to transfer ownership of a file or directory to another user or group.
+
+The basic syntax for the `chown` command is as follows:
+
+```bash
+chown [OPTIONS] USER[:GROUP] FILE
+sudo chown -R user2:group2 myfolder
+```
+After running this command, "myfolder" and all its contents will be owned by "user2" and assigned to "group2."
