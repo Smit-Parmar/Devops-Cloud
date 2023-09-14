@@ -1,7 +1,7 @@
 # Linux File and Directory Structure
 
 ## High level overview
-- ![File System](Images/file-system.png)
+- ![File System](https://github.com/Smit-Parmar/Devops-Cloud/blob/main/Images/file-system.png)
 ## Root Directory (/)
 
 - The root directory is the top-level directory in the Linux filesystem hierarchy.
