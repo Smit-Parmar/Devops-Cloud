@@ -99,3 +99,16 @@ chown [OPTIONS] USER[:GROUP] FILE
 sudo chown -R user2:group2 myfolder
 ```
 After running this command, "myfolder" and all its contents will be owned by "user2" and assigned to "group2."
+
+## `curl` Command in Linux
+The `curl` command in Linux is a versatile and powerful tool for making network requests to transfer data to or from a server or URL. It supports various protocols, including HTTP, HTTPS, FTP, FTPS, SCP, SFTP, LDAP, and more. `curl` is commonly used for tasks such as downloading files, testing APIs, and performing various web-related operations.
+
+```bash
+curl [OPTIONS] [URL]
+```
+- Download the file
+    `curl -O https://example.com/example.txt`
+- Send GET Requests
+    `curl https://api.example.com/data`
+- Send POST Requests
+    `curl -X POST -d "key1=value1&key2=value2" https://api.example.com/submit`
