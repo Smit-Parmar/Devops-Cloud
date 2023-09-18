@@ -112,3 +112,54 @@ curl [OPTIONS] [URL]
     `curl https://api.example.com/data`
 - Send POST Requests
     `curl -X POST -d "key1=value1&key2=value2" https://api.example.com/submit`
+
+## Package management commands
+#### For RPM based linux
+
+- Directly install the package
+```bash
+sudo yum install package-name  # For older versions (e.g., CentOS 6)
+sudo dnf install package-name  # For newer versions (e.g., CentOS 8)
+```
+- Remove package
+```bash
+sudo yum remove package-name  # For older versions
+sudo dnf remove package-name  # For newer versions
+```
+- Upgrade installed package
+```bash
+sudo yum install package-name  # For older versions (e.g., CentOS 6)
+sudo dnf install package-name  # For newer versions (e.g., CentOS 8)
+```
+
+- Download the RPM package
+`curl -O https://example.com/path-to/package.rpm`
+
+- Install the RPM package
+`sudo rpm -i package.rpm`
+
+- Verify the installation
+`rpm -q package-name`
+
+#### For Debian-based based linux
+- Directly install the package
+```bash
+sudo apt-get install package-name
+```
+- Remove package
+```bash
+sudo apt-get remove package-name 
+```
+- Upgrade installed package
+```bash
+sudo apt-get update
+```
+
+- Download the RPM package
+`curl -O https://example.com/path-to/package.deb`
+
+- Install the RPM package
+`sudo dpkg -i package.deb`
+
+- Verify the installation
+`rpm -q package-name`
