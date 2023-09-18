@@ -163,3 +163,20 @@ sudo apt-get update
 
 - Verify the installation
 `rpm -q package-name`
+
+## Linux Process Management Commands
+- `ps` command is used to list currently running processes.
+    - `ps aux`: Display a detailed list of all processes running on the system.
+    - `ps aux | grep process_name`: Find a specific process by name.
+- `top`: The top command provides a dynamic view of system processes and resource usage in real-time. It updates the display regularly, making it useful for monitoring system performance.
+- `kill`: The kill command is used to terminate processes. 
+    - `kill -9 PID`: Forcefully terminate a process with PID.   
+- The `systemctl` command is used to manage services and control the systemd system.
+```bash
+sudo systemctl start apache2
+sudo systemctl stop apache2
+sudo systemctl restart apache2
+sudo systemctl status apache2
+sudo systemctl enable apache2
+sudo systemctl disable apache2
+```
