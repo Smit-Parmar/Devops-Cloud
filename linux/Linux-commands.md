@@ -180,3 +180,21 @@ sudo systemctl status apache2
 sudo systemctl enable apache2
 sudo systemctl disable apache2
 ```
+
+## Linux Networking commands
+- `ifconfig / ip addr`: Display network interface information, including IP addresses, MAC addresses, and more.
+
+- `ping`: echo requests to a remote host to check network connectivity 
+- `netstat`: Display network statistics, including active network connections, routing tables, and more
+    -`netstat -tuln`
+- `ss`: A modern replacement for netstat. Display socket statistics, including listening and established connections.
+    - `ss -tuln`
+- ssh: Securely connect to a remote system over SSH (Secure Shell) for remote administration.
+    -  `ssh username@remote_server`
+- `scp`: Securely copy files between local and remote systems over SSH
+    - Copy from local to server
+        - `scp /path/to/local/file username@remote_server:/path/to/remote/destination/`
+    - Copy from server to local
+        - `scp username@remote_server:/path/to/remote/file /path/to/local/destination`
+- `lsof` command to find the process using port
+    - `sudo lsof -i :8000`
