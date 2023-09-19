@@ -112,3 +112,89 @@ curl [OPTIONS] [URL]
     `curl https://api.example.com/data`
 - Send POST Requests
     `curl -X POST -d "key1=value1&key2=value2" https://api.example.com/submit`
+
+## Package management commands
+#### For RPM based linux
+
+- Directly install the package
+```bash
+sudo yum install package-name  # For older versions (e.g., CentOS 6)
+sudo dnf install package-name  # For newer versions (e.g., CentOS 8)
+```
+- Remove package
+```bash
+sudo yum remove package-name  # For older versions
+sudo dnf remove package-name  # For newer versions
+```
+- Upgrade installed package
+```bash
+sudo yum install package-name  # For older versions (e.g., CentOS 6)
+sudo dnf install package-name  # For newer versions (e.g., CentOS 8)
+```
+
+- Download the RPM package
+`curl -O https://example.com/path-to/package.rpm`
+
+- Install the RPM package
+`sudo rpm -i package.rpm`
+
+- Verify the installation
+`rpm -q package-name`
+
+#### For Debian-based based linux
+- Directly install the package
+```bash
+sudo apt-get install package-name
+```
+- Remove package
+```bash
+sudo apt-get remove package-name 
+```
+- Upgrade installed package
+```bash
+sudo apt-get update
+```
+
+- Download the RPM package
+`curl -O https://example.com/path-to/package.deb`
+
+- Install the RPM package
+`sudo dpkg -i package.deb`
+
+- Verify the installation
+`rpm -q package-name`
+
+## Linux Process Management Commands
+- `ps` command is used to list currently running processes.
+    - `ps aux`: Display a detailed list of all processes running on the system.
+    - `ps aux | grep process_name`: Find a specific process by name.
+- `top`: The top command provides a dynamic view of system processes and resource usage in real-time. It updates the display regularly, making it useful for monitoring system performance.
+- `kill`: The kill command is used to terminate processes. 
+    - `kill -9 PID`: Forcefully terminate a process with PID.   
+- The `systemctl` command is used to manage services and control the systemd system.
+```bash
+sudo systemctl start apache2
+sudo systemctl stop apache2
+sudo systemctl restart apache2
+sudo systemctl status apache2
+sudo systemctl enable apache2
+sudo systemctl disable apache2
+```
+
+## Linux Networking commands
+- `ifconfig / ip addr`: Display network interface information, including IP addresses, MAC addresses, and more.
+
+- `ping`: echo requests to a remote host to check network connectivity 
+- `netstat`: Display network statistics, including active network connections, routing tables, and more
+    -`netstat -tuln`
+- `ss`: A modern replacement for netstat. Display socket statistics, including listening and established connections.
+    - `ss -tuln`
+- ssh: Securely connect to a remote system over SSH (Secure Shell) for remote administration.
+    -  `ssh username@remote_server`
+- `scp`: Securely copy files between local and remote systems over SSH
+    - Copy from local to server
+        - `scp /path/to/local/file username@remote_server:/path/to/remote/destination/`
+    - Copy from server to local
+        - `scp username@remote_server:/path/to/remote/file /path/to/local/destination`
+- `lsof` command to find the process using port
+    - `sudo lsof -i :8000`
