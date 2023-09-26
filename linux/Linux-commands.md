@@ -59,6 +59,9 @@ This document explains various commands for managing user access in a Linux syst
     - `su - john`
 - `passwd <username>` command is used to change the password of a user account. 
     - `passwd john`
+- `sudo useradd -u <uid> <username>.` Create user with UID
+- ` sudo usermod -d <dirpath> <username>`  Set home dir of user
+- `grep '<username>' /etc/passwd ` Check current user home dir
 
 ## Basic Redirection Commands in Linux
 
