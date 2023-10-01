@@ -65,3 +65,36 @@ kubectl delete pod <pod-name>
 ```bash
 kubectl delete pod <pod-name>
 ```
+
+**Check ReplicaSet**
+```bash
+kubectl get replicaset
+kubectl get replicaset <replicaset name>
+```
+
+**Check container used in replicaset**
+```bash
+kubectl describe replicaset
+```
+
+**Scale existing replicaset**
+```bash
+kubectl scale rs <name> --replicas=5
+```
+**Edit existing replicaset**
+```bash
+kubectl edit replicaset <name>
+```
+
+**kubectl apply**
+- This command is used to create or update resources by applying a configuration file. If the resource already exists, apply updates the resource with the new configuration.
+
+```bash
+kubectl apply -f <yaml file path>
+```
+
+**kubectl create**
+- create is used to create a new resource by specifying the resource definition in the command itself.
+```bash
+kubectl create -f <yaml file path>
+```
