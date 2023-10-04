@@ -98,3 +98,11 @@ kubectl apply -f <yaml file path>
 ```bash
 kubectl create -f <yaml file path>
 ```
+
+**Deployement**
+![Deployement Commands](https://github.com/Smit-Parmar/Devops-Cloud/blob/main/Images/deployement-update.png)
+
+```bash
+kubectl edit deployment <name>
+```
+
